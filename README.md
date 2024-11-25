@@ -38,6 +38,9 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+
+![Screenshot (56)](https://github.com/user-attachments/assets/e96135fe-795e-485e-8fc4-96795b8198b3)
+
 **Procedure**
 
 Write the detailed procedure here
@@ -47,9 +50,29 @@ Write the detailed procedure here
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
+module exp4(df,bo,a,b,bin);
+output df;
+output bo;
+input a;
+input b;
+input bin;
+wire w1,w2,w3;
+assign w1=a^b;
+assign w2=(~a&b);
+assign w3=(~w1&bin);
+assign df=w1^bin;
+assign bo=w2|w3;
+endmodule
+
 **RTL Schematic**
 
+![Screenshot (56)](https://github.com/user-attachments/assets/cb91a9b7-9657-4317-a86a-b79dfc392a07)
+
+
 **Output Timing Waveform**
+
+![Screenshot (24)](https://github.com/user-attachments/assets/8f5c7f21-2d84-4901-88ff-7c34d5fcc6db)
+
 
 **Result:**
 
